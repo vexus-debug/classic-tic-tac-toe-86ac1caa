@@ -1,5 +1,5 @@
 import Layout from "@/site/components/Layout";
-import PageHero from "@/site/components/PageHero";
+import { NarrativeHero } from "@/site/components/heroes";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight, MessageCircle, Check } from "lucide-react";
@@ -86,11 +86,13 @@ const included = [
 const EyeClinics = () => {
   return (
     <Layout>
-      <PageHero
-        eyebrow="Clinexus for eye clinics"
+      <NarrativeHero
+        kicker="Clinexus for eye clinics"
         title="You fix eyes all day. The paperwork shouldn't be the thing wearing you down."
         description="You chose this work because a patient's sight depends on you. So the exams, refractions, diagnostics, lens dispensing, surgeries and everyday admin shouldn't be the part that drains you. Clinexus holds it all in one simple place, so nothing slips past you."
-        primaryCta={{ label: "Talk to us on WhatsApp", href: WHATSAPP, external: true }}
+        primary={{ label: "Talk to us on WhatsApp", href: WHATSAPP, external: true }}
+        main={{ src: shotOverview, alt: "Clinexus eye clinic overview with today's patient flow" }}
+        inset={{ src: shotPrescriptions, alt: "Optical prescriptions list with sphere, cylinder and axis" }}
         points={[
           { value: "3–4 hrs", label: "Admin time given back each day" },
           { value: "40%", label: "Fewer no-shows with automatic reminders" },

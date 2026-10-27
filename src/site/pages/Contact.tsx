@@ -1,5 +1,5 @@
 import Layout from "@/site/components/Layout";
-import PageHero from "@/site/components/PageHero";
+import { ContactHero } from "@/site/components/heroes";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -26,15 +26,18 @@ const Contact = () => {
   return (
     <Layout>
       {/* Hero */}
-      <PageHero
-        eyebrow="Contact us"
+      <ContactHero
         title="Tell us what's slowing your clinic down."
         description="Want a demo, have questions, or need something specific? Our team is ready to help you get your time and money back."
-        primaryCta={{ label: "Chat on WhatsApp", href: "https://wa.me/2349017758165?text=Hello%20I%20would%20like%20to%20know%20more%20about%20Clinexus", external: true }}
+        channels={[
+          { label: "WhatsApp", value: "0901 7758 165", href: "https://wa.me/2349017758165?text=Hello%20I%20would%20like%20to%20know%20more%20about%20Clinexus" },
+          { label: "Email", value: "support@clinexus.com.ng", href: "mailto:support@clinexus.com.ng" },
+          { label: "Office", value: "Ikeja, Lagos, Nigeria" },
+          { label: "Hours", value: "Mon – Fri, 8am – 6pm WAT" },
+        ]}
         points={[
           { value: "24 hrs", label: "Response time on every message" },
-          { value: "30 min", label: "Personalized walkthrough when you ask for a demo" },
-          { value: "<2 hrs", label: "Average in-app support response for customers" },
+          { value: "30 min", label: "Walkthrough when you ask for a demo" },
         ]}
       />
 

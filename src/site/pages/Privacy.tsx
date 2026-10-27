@@ -1,5 +1,5 @@
 import Layout from "@/site/components/Layout";
-import PageHero from "@/site/components/PageHero";
+import { LegalHero } from "@/site/components/heroes";
 import { motion } from "framer-motion";
 
 const sections = [
@@ -18,10 +18,11 @@ const Privacy = () => {
   return (
     <Layout>
       {/* Hero */}
-      <PageHero
-        eyebrow="Privacy policy"
+      <LegalHero
+        kind="Privacy policy"
+        updated="February 2026"
         title="Your patients' data, protected like it's our own."
-        description="Last updated: February 2026. This policy explains exactly what we collect, how we use it, and the measures we take to protect it."
+        description="This policy explains exactly what we collect, how we use it, and the measures we take to protect it."
         points={[
           { value: "256-bit", label: "AES encryption at rest, TLS 1.3 in transit" },
           { value: "72 hrs", label: "Breach notification commitment" },
