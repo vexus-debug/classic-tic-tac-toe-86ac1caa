@@ -13,6 +13,15 @@ export interface UpdateEntry {
 
 export const updates: UpdateEntry[] = [
   {
+    version: "v2.2.3",
+    date: "October 27, 2026",
+    title: "Shared design and content guidelines",
+    kind: "improvement",
+    items: [
+      { kind: "improvement", text: "Added a shared set of design, writing and visual guidelines so every future change follows the same standards." },
+    ],
+  },
+  {
     version: "v2.2.2",
     date: "October 27, 2026",
     title: "Clearer dental overview",
