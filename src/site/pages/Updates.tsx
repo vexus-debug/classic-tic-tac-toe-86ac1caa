@@ -1,5 +1,5 @@
 import Layout from "@/site/components/Layout";
-import PageHero from "@/site/components/PageHero";
+import { ChangelogHero } from "@/site/components/heroes";
 import { motion } from "framer-motion";
 import { Sparkles, Wrench, ArrowUpCircle, ArrowRight, Zap } from "lucide-react";
 import { updates, kindLabel, type UpdateKind } from "@/data/updates";
@@ -21,11 +21,11 @@ const kindBadgeClass: Record<UpdateKind, string> = {
 const Updates = () => {
   return (
     <Layout>
-      <PageHero
-        eyebrow="Product Updates"
+      <ChangelogHero
         title="What's new in Clinexus."
         description="Every new feature, improvement and bug fix we ship — logged here so your team always knows what changed."
-        primaryCta={{ label: "Get Started", href: APP_URL, external: true }}
+        latest={updates[0]}
+        total={updates.length}
       />
 
       <section className="relative site-section-light overflow-hidden py-20">

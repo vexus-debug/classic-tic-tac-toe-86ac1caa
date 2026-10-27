@@ -1,5 +1,5 @@
 import Layout from "@/site/components/Layout";
-import PageHero from "@/site/components/PageHero";
+import { NarrativeHero } from "@/site/components/heroes";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import {
@@ -109,12 +109,14 @@ const coreGroups = [
 const DentalClinics = () => {
   return (
     <Layout>
-      <PageHero
-        eyebrow="Clinexus for dental clinics"
+      <NarrativeHero
+        kicker="Clinexus for dental clinics"
         title="You didn't spend years learning to heal teeth so you could chase folders all evening."
-        description="You know the feeling — a full waiting room, a patient in the chair who needs all of you, and a stack of files daring you to fall behind. We built Clinexus sitting with dental clinics like yours, listening to the days you actually have. Everything here exists because someone like you asked for it, not because a software company guessed."
-        primaryCta={{ label: "Talk to us on WhatsApp", href: WHATSAPP, external: true }}
-        secondaryCta={{ label: "See pricing", href: "/industries/dental-clinics/pricing" }}
+        description="You know the feeling — a full waiting room, a patient in the chair who needs all of you, and a stack of files daring you to fall behind. We built Clinexus sitting with dental clinics like yours, listening to the days you actually have."
+        primary={{ label: "Talk to us on WhatsApp", href: WHATSAPP, external: true }}
+        secondary={{ label: "See pricing", href: "/industries/dental-clinics/pricing" }}
+        main={{ src: shotDashboard, alt: "Clinexus dental dashboard with today's schedule and revenue" }}
+        inset={{ src: shotCharts, alt: "Tooth chart with per-tooth condition colours" }}
         points={[
           { value: "3–4 hrs", label: "Admin time given back each day" },
           { value: "40%", label: "Fewer no-shows with automatic reminders" },

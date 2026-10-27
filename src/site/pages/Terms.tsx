@@ -1,5 +1,5 @@
 import Layout from "@/site/components/Layout";
-import PageHero from "@/site/components/PageHero";
+import { LegalHero } from "@/site/components/heroes";
 import { motion } from "framer-motion";
 
 const sections = [
@@ -21,10 +21,11 @@ const Terms = () => {
   return (
     <Layout>
       {/* Hero */}
-      <PageHero
-        eyebrow="Terms of service"
+      <LegalHero
+        kind="Terms of service"
+        updated="February 2026"
         title="Plain-language terms, no lawyer required."
-        description="Last updated: February 2026. These terms govern your use of Clinexus, written clearly because legal documents shouldn't need translation."
+        description="These terms govern your use of Clinexus, written clearly because legal documents shouldn't need translation."
         points={[
           { value: "99.9%", label: "Uptime target on all paid plans" },
           { value: "30 days", label: "To export your data after cancellation" },

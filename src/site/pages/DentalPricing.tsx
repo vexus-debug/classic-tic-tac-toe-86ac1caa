@@ -1,5 +1,5 @@
 import Layout from "@/site/components/Layout";
-import PageHero from "@/site/components/PageHero";
+import { PriceHero } from "@/site/components/heroes";
 import { Check } from "lucide-react";
 import { Link } from "react-router-dom";
 import CaseCalculator from "@/site/components/CaseCalculator";
@@ -17,11 +17,19 @@ const included = ["Setup, training and data import", "Every feature, no add-ons"
 
 const DentalPricing = () => (
   <Layout>
-    <PageHero
-      eyebrow="Dental clinic pricing"
+    <PriceHero
+      kicker="Dental clinic pricing"
       title="Simple pricing. You only pay when you see patients."
       description="A one-time setup fee, then ₦1,000 per patient case. No monthly subscription."
-      primaryCta={{ label: "Talk to us on WhatsApp", href: WHATSAPP, external: true }}
+      primary={{ label: "Talk to us on WhatsApp", href: WHATSAPP, external: true }}
+      secondary={{ label: "How a case works", href: "/industries/dental-clinics/pricing/cases" }}
+      figure="₦1,000"
+      unit="per patient case"
+      ledger={[
+        { term: "Setup", detail: "One-time fee to get your clinic live" },
+        { term: "Monthly fee", detail: "None — no subscription" },
+        { term: "One case", detail: "One patient, 30 days, up to 3 visits" },
+      ]}
     />
     <div className="mx-auto max-w-3xl space-y-12 px-4 py-12 sm:px-6">
       <section>

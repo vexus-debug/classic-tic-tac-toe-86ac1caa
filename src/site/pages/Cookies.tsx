@@ -1,12 +1,13 @@
 import Layout from "@/site/components/Layout";
-import PageHero from "@/site/components/PageHero";
+import { LegalHero } from "@/site/components/heroes";
 
 const Cookies = () => (
   <Layout>
-    <PageHero
-      eyebrow="Cookie policy"
+    <LegalHero
+      kind="Cookie policy"
+      updated="February 2026"
       title="A clear view of the cookies we use."
-      description="Last updated: February 2026. This policy explains which cookies support the Clinexus website and how you can control optional cookies."
+      description="This policy explains which cookies support the Clinexus website and how you can control optional cookies."
     />
     <section className="site-section-light py-16 md:py-20">
       <div className="container max-w-3xl space-y-8">
